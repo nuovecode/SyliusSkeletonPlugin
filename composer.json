@@ -10,7 +10,7 @@
         }
     ],
     "license": "MIT",
-    "type": "symfony-bundle",
+    "type": "sylius-plugin",
     "require": {
         "php": "~8.2|~8.3|~8.4",
         "symfony/webpack-encore-bundle": "^1.12 || ^2.0",
@@ -29,7 +29,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "WilmaDigital\\SyliusSkeletonPlugin\\": "vendor/wilma-digital/SyliusSkeletonPlugin/src/"
+            "WilmaDigital\\SyliusSkeletonPlugin\\": "src/"
         }
     },
     "config": {
@@ -41,23 +41,8 @@
         "sort-packages": true
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
+        "sylius-plugin": {
+            "class": "WilmaDigital\\SyliusSkeletonPlugin\\WilmaDigitalSkeletonPlugin"
         }
-    },
-    "scripts": {
-        "analyse": [
-            "@ensure-test-container-exists",
-            "psalm"
-        ],
-        "check-style": "ecs check",
-        "ensure-test-container-exists": "[[ -f tests/Application/var/cache/test/ApplicationTests_Setono_SyliusFeedPlugin_Application_KernelTestDebugContainer.xml ]] || tests/Application/bin/console cache:warmup --env=test",
-        "fix-style": "ecs check --fix",
-        "phpspec": "phpspec run",
-        "phpunit": "phpunit",
-        "test": [
-            "@phpunit",
-            "@phpspec"
-        ]
     }
 }
