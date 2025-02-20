@@ -29,7 +29,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Setono\\SyliusFeedPlugin\\": "src/"
+            "WilmaDigital\\SyliusSkeletonPlugin\\": "vendor/wilma-digital/SyliusSkeletonPlugin/src/"
         }
     },
     "config": {
