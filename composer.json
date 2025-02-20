@@ -1,0 +1,63 @@
+{
+    "name": "wilma-digital/sylius-plugin-skeleton",
+    "description": "Skeleton to create a Sylius plugin that impacts the frontend",
+    "authors": [
+        {
+            "name": "WilMa Digital"
+        },
+        {
+            "name": "Irene Iaccio"
+        }
+    ],
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "~8.2|~8.3|~8.4",
+        "symfony/webpack-encore-bundle": "^1.12 || ^2.0",
+        "ext-json": "*",
+        "ext-intl": "*",
+        "ext-exif": "*",
+        "sylius/sylius": "^2.0",
+        "doctrine/collections": "^1.6",
+        "doctrine/orm": "^2.7",
+        "doctrine/persistence": "^1.3 || ^2.0 || ^3.0",
+        "twig/twig": "^2.14 || ^3.0"
+    },
+    "require-dev": {
+        "friendsoftwig/twigcs": "^6.5"
+    },
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Setono\\SyliusFeedPlugin\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false,
+            "ergebnis/composer-normalize": true,
+            "symfony/thanks": false
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "scripts": {
+        "analyse": [
+            "@ensure-test-container-exists",
+            "psalm"
+        ],
+        "check-style": "ecs check",
+        "ensure-test-container-exists": "[[ -f tests/Application/var/cache/test/ApplicationTests_Setono_SyliusFeedPlugin_Application_KernelTestDebugContainer.xml ]] || tests/Application/bin/console cache:warmup --env=test",
+        "fix-style": "ecs check --fix",
+        "phpspec": "phpspec run",
+        "phpunit": "phpunit",
+        "test": [
+            "@phpunit",
+            "@phpspec"
+        ]
+    }
+}

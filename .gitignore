@@ -1,0 +1,12 @@
+/vendor/
+/node_modules/
+/composer.lock
+
+/etc/build/*
+!/etc/build/.gitignore
+!/etc/build/.gitkeep
+
+/behat.yml
+/phpspec.yml
+
+package-lock.json

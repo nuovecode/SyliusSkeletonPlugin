@@ -1,0 +1,6 @@
+sylius_twig_hooks:
+    hooks:
+        'sylius_shop.base.header.content':
+            search_form:
+                template: "@WilmaDigitalSkeletonPlugin/Shop/dummy.html.twig"
+                priority: 250
