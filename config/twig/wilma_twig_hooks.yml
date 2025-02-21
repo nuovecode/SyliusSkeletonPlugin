@@ -4,3 +4,11 @@ sylius_twig_hooks:
             search_form:
                 template: "@WilmaDigitalSkeletonPlugin/Shop/dummy.html.twig"
                 priority: 250
+        'sylius_shop.base#stylesheets':
+            wilma.styles:
+                template: '@WilmaDigitalSkeletonPlugin/Shop/styles.html.twig'
+                priority: 0
+        'sylius_shop.base#javascripts':
+            wilma.scripts:
+                template: '@WilmaDigitalSkeletonPlugin/Shop/scripts.html.twig'
+                priority: 0

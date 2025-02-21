@@ -1,0 +1,10 @@
+.wilma-custom-widget {
+    background-color: rgb(147 214 225);
+    padding: 15px;
+    border-radius: 15px;
+    color: #fff;
+}
+.wilma-custom-widget-action {
+    text-decoration: underline;
+    font-weight: bold;
+}
