@@ -8,3 +8,12 @@ return [
 WilmaDigital\SyliusSkeletonPlugin\WilmaDigitalSkeletonPlugin::class => ['all' => true]
 ];
 ```
+
+```
+# config/packages/_sylius.yaml
+
+imports:
+    ...
+    - { resource: "@WilmaDigitalSkeletonPlugin/config/config.yml" }
+    
+```

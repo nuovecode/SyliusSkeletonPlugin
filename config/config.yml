@@ -1,0 +1,2 @@
+imports:
+    - { resource: "twig/wilma_twig_hooks.yml" }
